@@ -48,7 +48,7 @@ tempest_configuration () {
     apt-get update; apt-get install -y iputils-ping curl wget
     rally verify create-verifier --name tempest_verifier_$sub_name --type tempest --source $TEMPEST_REPO --version $tempest_version
     rally verify add-verifier-ext --version 7a4bff728fbd8629ec211669264ab645aa921e2b --source https://github.com/openstack/telemetry-tempest-plugin
-    rally verify add-verifier-ext --version 0.3.0 --source https://github.com/openstack/heat-tempest-plugin
+    rally verify add-verifier-ext --version 0.2.0 --source https://github.com/openstack/heat-tempest-plugin
     pip install --force-reinstall python-cinderclient==3.2.0
     unset https_proxy
   fi
